@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  {{> head-meta}}
+  <link rel="stylesheet" type="text/css" href="/styles/posts.css">
+  <link rel="stylesheet" type="text/css" href="/styles/comments.css">
+  <script type="text/javascript" src="/scripts/create-comment.js"></script>
+  <title>{{ post.title }}</title>
+</head>
+<body>
+
+{{> header-block}}
+
+<main class="main">
+  {{> navigation-block}}
+
+  <div class="main-content">
+      <h1 class="content-title">{{ post.title }}</h1>
+      <div class="posts-block__post-text">{{ post.text }}</div>
+      <div class="posts-block__post-description">
+          <div>{{ post.author.name }}</div>
+          <div>{{ post.createdAt }}</div>
+      </div>
+
+      <h1 class="content-title">Оставить комментарий</h1>
+
+      <form class="comment-input-block" id="comment-form">
+          <input type="text" id="comment-text" class="comment-input"/>
+          <input type="submit" value="Отправить" class="comment-submit-button">
+      </form>
+      
+      <h1 class="content-title">Комментарии</h1>
+      <div class="comments-block" id="comments-block">
+        {{#each post.comments}}
+            <div>{{this.text}}</div>
+            <div>{{this.author.name}}</div>
+        {{/each}}
+      </div>
+  </div>
+</main>
+
+{{> footer-block}}
+</body>
+</html>

@@ -1,0 +1,43 @@
+.comment-input-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.comment-input {
+    font-family: 'Kanit', sans-serif;
+    width: 70%;
+    font-size: 18px;
+    height: 30px;
+    padding: 0 0 0 5px;
+    border-radius: 10px;
+    border: 1px #91859e solid;
+
+    color: #696565;
+}
+.comment-submit-button {
+    border: 1px #91859e solid;
+    border-radius: 10px;
+    background: none;
+    width: 25%;
+
+    height: 30px;
+}
+
+
+.comments-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-block {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Kanit', sans-serif;
+    color: #696565;
+    border-bottom: 1px #91859e solid;
+}
+
+.comment-block__author {
+    color: #ee3333;
+}

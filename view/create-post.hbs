@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  {{> head-meta}}
+  <link rel="stylesheet" type="text/css" href="/styles/posts.css">
+  <script type="text/javascript" src="/scripts/create-post.js"></script>
+  <title>Создать пост</title>
+</head>
+<body>
+
+{{> header-block}}
+
+<main class="main">
+
+  {{> navigation-block}}
+
+  <div class="main-content">
+      <h1 class="content-title">Создать пост</h1>
+      <form class="create-post-form" id="create-post-form">
+          <input type="text" id="post-title" class="post-title-input">
+          <textarea type="text" id="post-text" class="post-text-input"></textarea>
+          <input type="submit" value="Отправить" class="post-submit-button">
+      </form>
+  </div>
+
+  
+</main>
+
+{{> footer-block}}
+</body>
+</html>

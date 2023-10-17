@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  {{> head-meta}}
+  <link rel="stylesheet" type="text/css" href="styles/themes-block.css">
+  <title>Главная</title>
+</head>
+<body>
+
+{{> header-block}}
+
+<main class="main">
+  {{> navigation-block}}
+  <div class="main-content">
+    <h1 class="content-title">Список топиков</h1>
+    <div class="themes-block">
+      {{#each mappedThemes}}
+        <a href="{{this.link}}" class="themes-block__theme">
+          <img src="{{this.image}}" alt="">
+          <div class="themes-block__theme-title">{{this.title}}</div>
+        </a>
+      {{/each}}
+    </div>
+  </div>
+
+  
+</main>
+
+{{> footer-block}}
+</body>
+</html>

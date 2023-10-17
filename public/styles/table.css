@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Noto+Sans:wght@300&display=swap');
+
+.table__container {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-template-rows: repeat(5, 30px);
+
+    text-align: center;
+    text-justify: auto;
+    font-size: 16px;
+    font-family: 'Noto Sans', sans-serif;
+    color: #696565;
+}
+
+.table__row {
+    display: contents;
+}
+
+.table__odd-row .table__elem {
+    background-color: #ddd;
+
+}

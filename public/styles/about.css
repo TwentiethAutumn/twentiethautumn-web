@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Noto+Sans:wght@300&display=swap');
+a.email {
+    text-decoration: none;
+    color: #91859e;
+    font-family: 'Kanit', sans-serif;
+    font-size: 20px;
+}
+
+.main-content {
+    text-decoration: none;
+    color: #696565;
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+}

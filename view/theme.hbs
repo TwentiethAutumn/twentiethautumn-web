@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  {{> head-meta}}
+  <link rel="stylesheet" type="text/css" href="/styles/posts.css">
+  <title>{{ title }}</title>
+</head>
+<body>
+
+{{> header-block}}
+
+<main class="main">
+  {{> navigation-block}}
+  <div class="main-content">
+    <h1 class="content-title">{{ title }}</h1>
+    <a href="/create-post/{{ id }}" class="add-content-link">→ Создать пост</a>
+      <div class="posts-block__post-text"> Список существующих постов: </div>
+    <div class="posts-block">
+      {{#each posts}}
+        <a href="/post/{{this.id}}" class="posts-block__post">
+          <div class="posts-block__post-title">{{this.title}}</div>
+            <div class="posts-block__post-description">
+                <div>Автор: {{this.author.name}} </div>
+            </div>
+          <div class="posts-block__post-text">{{this.text}}</div>
+
+        </a>
+      {{/each}}
+    </div>
+  </div>
+
+  
+</main>
+
+{{> footer-block}}
+</body>
+</html>
