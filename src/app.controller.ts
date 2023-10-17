@@ -12,7 +12,6 @@ export class AppController {
   @Get()
   @Render("home")
   async indexView(){
-    console.log(process.env.ORIGIN);
     const response = await fetch(process.env.ORIGIN + '/themes', {
       method: 'GET',
       headers: {
@@ -21,7 +20,9 @@ export class AppController {
     });
 
     const data = await response.json();
-
+    console.log(data);
+    console.log(response.status);
+    console.log(response.ok);
     if (response.ok) {
       const themes: [Theme] = data;
 

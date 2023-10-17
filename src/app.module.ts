@@ -24,8 +24,8 @@ const typeOrmOptions: TypeOrmModuleOptions = {
   password: connectionOptions.password,
   database: connectionOptions.database,
   entities: [User, Theme, Comment, Post],
-  synchronize: false,
-  ssl: true,
+  synchronize: true,
+  ssl: false,
   extra: {
     rejectUnauthorized: false,
   }
