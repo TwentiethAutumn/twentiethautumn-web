@@ -12,7 +12,7 @@ export class AppController {
   @Get()
   @Render("home")
   async indexView(){
-    const response = await fetch(process.env.ORIGIN + '/themes', {
+    const response = await fetch(process.env.ORIGIN + 'themes', {
       method: 'GET',
       headers: {
         'content-type': 'application/json;charset=UTF-8',
@@ -44,7 +44,7 @@ export class AppController {
   @Render('theme')
   async themeView(@Param('id') id: number) {
     const response = await fetch(
-        process.env.ORIGIN + '/themes/' + id,
+        process.env.ORIGIN + 'themes/' + id,
         {
           method: 'GET',
           headers: {
@@ -71,7 +71,7 @@ export class AppController {
   @Get('/post/:id')
   @Render('post')
   async postView(@Param('id') id: number) {
-    const response = await fetch(process.env.ORIGIN + '/posts/' + id, {
+    const response = await fetch(process.env.ORIGIN + 'posts/' + id, {
       method: 'GET',
       headers: {
         'content-type': 'application/json;charset=UTF-8',
