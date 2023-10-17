@@ -12,6 +12,7 @@ export class AppController {
   @Get()
   @Render("home")
   async indexView(){
+    console.log(process.env.ORIGIN);
     const response = await fetch(process.env.ORIGIN + '/themes', {
       method: 'GET',
       headers: {
